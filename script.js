@@ -15,7 +15,7 @@ async function searchImages(){
     keyword=searchBox.value //it will store the value that we will enter in input field
 
     // with this api url we are adding page number using${page} and keyword using ${keyword} and accesKey using ${accessKey}
-    const url=`https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}`
+    const url=`https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`
 
     const response=await fetch(url)
     const data=await response.json()
@@ -35,14 +35,22 @@ async function searchImages(){
         imageLink.appendChild(image)
 
         // a tag will be displayed in search-result id 
-        imageLink.appendChild(imageLink)
+        searchResult.appendChild(imageLink)
     })
 
+    // show more button 
+    showMoreBtn.style.display="block"
 }
 
 // search form
 searchForm.addEventListener("submit",(e)=>{
     e.preventDefault()
     page=1  // everytime search new keyword it will start form page 1
+    searchImages()
+})
+
+// click event on show more btn , when we click on shw btn it will displayed more images
+showMoreBtn.addEventListener("click",()=>{
+    page++ // increse the value of page by 1
     searchImages()
 })
