@@ -66,5 +66,5 @@ form button{
     border-radius: 4px;
     margin: 10px auto 100px;
     cursor: pointer;
-    display: none;  /* display none because when the will be load thorugh api the show more button will show*/
+    display: none;  /* display none because when the img will load thorugh api the show more button will show*/
 }
