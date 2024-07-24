@@ -1,22 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     background: #39297b;
     color: #fff;
 }
 
-h1{
+h1 {
     text-align: center;
     margin: 100px auto 50px;
     font-weight: 600;
 }
 
 /* form */
-form{
+form {
     width: 90%;
     max-width: 600px;
     margin: auto;
@@ -27,7 +28,7 @@ form{
     border-radius: 8px;
 }
 
-form input{
+form input {
     flex: 1;
     height: 100%;
     border: 0;
@@ -38,7 +39,7 @@ form input{
     padding: 0 30px;
 }
 
-form button{
+form button {
     padding: 0 40px;
     height: 100%;
     background: #ff3929;
@@ -51,13 +52,13 @@ form button{
     cursor: pointer;
 }
 
-::placeholder{
+::placeholder {
     color: #fff;
     font-size: 18px;
 }
 
 /* Show More Btn */
-#show-more-btn{
+#show-more-btn {
     background: #ff3929;
     color: #fff;
     border: 0;
@@ -66,20 +67,31 @@ form button{
     border-radius: 4px;
     margin: 10px auto 100px;
     cursor: pointer;
-    display: none;  /* display none because when the img will load thorugh api the show more button will show*/
+    display: none;
+    /* display none because when the img will load thorugh api the show more button will show*/
 }
 
 /* #search-result-> displayed img */
-#search-result{
+#search-result {
     width: 80%;
     margin: 100px auto 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  /*shwo 3 img in 1 row*/
+    grid-template-columns: 1fr 1fr 1fr;
+    /*shwo 3 img in 1 row*/
     grid-gap: 40px;
 }
-#search-result img{
+
+#search-result img {
     width: 100%;
     height: 230px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+
+.img-credit {
+    font-size: 8px;
+    position: absolute;
+    top: 8px;
+    right: 16px;
 }

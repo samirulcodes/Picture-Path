@@ -20,6 +20,11 @@ async function searchImages(){
     const response=await fetch(url)
     const data=await response.json()
 
+    // condition check
+    if(page===1){
+        searchResult.innerHTML=""
+    }
+
     const results=data.results
 
     results.map((result)=>{
