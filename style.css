@@ -95,3 +95,62 @@ form button {
     top: 8px;
     right: 16px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        height: 50px;
+    }
+
+    form input {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    #search-result {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 15px;
+    }
+
+    #search-result img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        height: 45px;
+    }
+
+    form input {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    #search-result {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+
+    #search-result img {
+        height: 180px;
+    }
+}
